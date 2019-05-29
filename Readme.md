@@ -27,3 +27,11 @@
 17.1 sudo -u postgres psql -d demo
 17.2 \i <path to sql file>
 
+18. setup postgresql connection
+18.1 install postgres driver psycopg2
+    sudo apt install postgresql-server-dev-9.5
+    sudo apt install libpq-dev
+    pip install psycopg2-binary #  or     pip install psycopg2
+18.2 Generating models from db
+    python3.7 manage.py inspectdb 
+  
