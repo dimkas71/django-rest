@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from flightsrest.flightsrest.models import Bookings
+from flightsrest.flightsrest.models import Aircraft
 from rest_framework import serializers
 
 
@@ -14,3 +14,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         model = Group
         fields = ('url', 'name')
 
+class AircraftSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Aircraft
+        fields = ('aircraft_code', 'model', 'range')
