@@ -1,2 +1,4 @@
 .vscode/
 venv/
+flightsrest/__pycache__/
+flightsrest/flightsrest/__pycache__/

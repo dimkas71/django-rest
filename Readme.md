@@ -12,7 +12,15 @@
 10. python manage.py migrate
 11. python manage.py createsuperuser --email admin@example.com --username admin 
     password:password123
+
 12. python manage.py runserver
 13. http -a admin:password123 http://127.0.0.1:8000/users/ 
+
+13.1 https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
+
+14. pip install djangorestframework_simplejwt
+15. update token http post http://127.0.0.1:8000/api/token/ username=admin password=password123
+16. request to url
+    http http://127.0.0.1:8000/hello/ "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTU5MTM3NjE4LCJqdGkiOiIyYjE3OGE1Yzg4YWE0Y2U5OTg2YzEwMGQ0NzEwMzM0OSIsInVzZXJfaWQiOjF9.odpaw2bYk_0rqrcEEVl7GWDYHQF-Q7XzsCqwl4_b_Zs"
 
 
