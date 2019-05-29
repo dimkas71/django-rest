@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User, Group
+from flightsrest.flightsrest.models import Bookings
 from rest_framework import viewsets
 from flightsrest.flightsrest.serializers import UserSerializer, GroupSerializer
 
@@ -28,3 +29,4 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
