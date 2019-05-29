@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from flightsrest.flightsrest.serializers import UserSerializer, GroupSerializer, AircraftSerializer
-from flightsrest.flightsrest.models import Aircraft
+from flightsrest.flightsrest.serializers import UserSerializer, GroupSerializer, AircraftSerializer, AirportSerializer
+from flightsrest.flightsrest.models import Aircraft, Airport
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -36,3 +36,9 @@ class AircraftViewSet(viewsets.ModelViewSet):
     queryset = Aircraft.objects.all().order_by('-range')
     serializer_class = AircraftSerializer
 
+class AirportViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows airports to be viewed
+    """
+    queryset = Airport.objects.all()
+    serializer_class = AirportSerializer

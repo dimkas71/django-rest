@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from flightsrest.flightsrest.models import Aircraft
+from flightsrest.flightsrest.models import Aircraft, Airport
 from rest_framework import serializers
 
 
@@ -18,3 +18,8 @@ class AircraftSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Aircraft
         fields = ('aircraft_code', 'model', 'range')
+
+class AirportSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Airport
+        fields = ('airport_code', 'airport_name', 'city', 'timezone')
