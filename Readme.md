@@ -23,4 +23,7 @@
 16. request to url
     http http://127.0.0.1:8000/hello/ "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTU5MTM3NjE4LCJqdGkiOiIyYjE3OGE1Yzg4YWE0Y2U5OTg2YzEwMGQ0NzEwMzM0OSIsInVzZXJfaWQiOjF9.odpaw2bYk_0rqrcEEVl7GWDYHQF-Q7XzsCqwl4_b_Zs"
 
+17. create db demo and load data from a sql script
+17.1 sudo -u postgres psql -d demo
+17.2 \i <path to sql file>
 
